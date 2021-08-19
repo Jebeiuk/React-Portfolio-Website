@@ -1,0 +1,223 @@
+@import "../../global.scss";
+
+
+
+.works {
+  background: black; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+   
+  .arrow {
+    height: 50px;
+    position: absolute;
+    cursor: pointer;
+    color: $mainColor;    
+    
+    &.left {
+      left: 100px;
+    }
+
+    &.right {
+      right: 100px;
+    }
+
+    &.bottom{
+      bottom: 35px;
+    }
+
+    &.top{
+      top: 35px;
+    } 
+    
+    @include mobile {
+      &.left {
+        left: 70px;
+        bottom: 35px;        
+      }
+  
+      &.right {
+        right: 70px;
+        bottom: 35px;
+      } 
+      
+      &.top{
+        display: none;
+      } 
+    }
+  }
+
+  .slider {
+    
+    height: 560px;
+    display: flex;
+    position: absolute;
+    left: 0;
+    transition: all 1s ease-out;
+
+    @include mobile {
+      height: 100vh;
+    }
+
+    .container {
+      width: 100vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+
+      .item {
+        width: 700px;
+        height: 100%;
+        background-color: white;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;        
+        box-shadow: 0px 0px 5px 1px rgb(124, 229, 255);
+        padding: 20px;
+        border-radius: 60px;
+        border: 3px solid rgb(124, 229, 255);    
+         
+        @include xl {
+          width: 890px;
+          height: 80%;
+        }
+
+        @include xxl {
+            width: 990px;
+            height: 90%;
+        }
+
+        @include mobile {
+          width: 80%;
+          height: 50%;
+          margin: 15px 0;
+          flex-direction: column;
+        }
+
+        .left {
+          flex: 4;
+          height: 90%;
+          display: flex;
+          align-items: center;
+          justify-content: center;          
+
+          .leftContainer {
+            width: 100%;
+            height: 90%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;         
+            
+            .imgContainer {
+              width: 90px;
+              height: 70px;
+              border-radius: 10%;
+              display: flex;
+              overflow: hidden;
+              
+              
+              @include mobile {
+                display: none;
+              } 
+              
+              img {
+                width: 70px;
+                overflow: hidden;
+              }
+       
+            };
+
+
+            h2 {
+              font-size: 23px;
+              color:crimson;
+              font-family: 'Concert One', cursive;
+              font-family: 'Graduate', cursive;
+              overflow: hidden;
+
+              @include mobile{
+                font-size: 14px;
+                
+              }
+            }
+
+           p {
+              font-size: 18px;
+
+              @include mobile{
+                display:none;                
+              }
+              
+            }
+            
+          li {
+            font-size: 18px;
+            color: rgb(0, 0, 0);
+            font-weight: 700;
+            flex-direction:row;
+                            // large devices
+            @include xl {
+              font-size: 15px;           
+            }
+         
+            @include xxl {
+             font-size: 18px;
+            }                  
+                        
+            @include mobile{
+              font-size: 12px;     
+              overflow: hidden;               
+            } 
+             
+          }
+
+
+          button {
+            font-size: 18px;
+            font-weight: 600;
+            text-decoration:none;
+            cursor: pointer;
+            background-color: rgb(0, 0, 0);
+            overflow: hidden;
+            color: $mainColor;
+            width: 120px;
+            box-shadow: 0px 0px 5px 1px rgb(124, 229, 255);
+            padding: 10px;
+            border-radius: 10px;
+            border: 3px solid rgb(124, 229, 255);
+
+              @include mobile{
+                font-size: 15px;
+                width: 90px;                               
+              } 
+
+            }
+            
+          }
+        };
+
+        .right {
+          flex: 8;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          overflow: hidden;
+          
+          img {
+            width: 90%;
+            border-radius: 1%;            
+          }
+
+          @include mobile{
+           width: 110%;           
+          }
+        }
+      }
+    }
+  }
+}
